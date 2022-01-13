@@ -63,4 +63,6 @@ plot_SERVER <- function(id, df) {
       plotly::ggplotly(p1)
     })
     
-} )}
+  } )}
+
+

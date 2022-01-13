@@ -7,6 +7,8 @@ suppressPackageStartupMessages({
   library(plotly)
 })
 
+if(!require('tabulate', character.only = TRUE)) devtools::install_github("markitr/tabulate")
+
 source("plot_module.R")
 
 df <- read_csv("../Data/sveriges_radio_P3_2018_2021_TOT.csv")
