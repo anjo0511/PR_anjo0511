@@ -36,7 +36,7 @@ print(head(df,n = 5))
 ## The shiny logic
 
 - All actions on the UI will make a reaction on the server
-- One can as well group some elements in the so called module to create a 
+- One can as well group some elements in a module to create an 
 unique name space and reuse code.
 
 - Figure 1. Shiny logic, action means reaction
@@ -59,7 +59,8 @@ unique name space and reuse code.
 
 - The learning curve is not as big if you know R
 
-- Modularize applications are greate but one need to choose your battles
+- Modules are great but one need to choose your battles, the more is not
+the merrier
 
-- Recomend using shiny to share analysis results
+- Recommend using shiny to share analysis results
 
