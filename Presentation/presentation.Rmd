@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Introduction
 
-- Do you got the skills to make a web interface?
+- Do you have the skills to make a web interface?
 - R shiny enables web interface coding inside rstudio
 - R shiny converts R to html, css and javascipt
 - Purpose is to test the rumors and see for myself if it can be useful for
@@ -25,7 +25,7 @@ explorative analysis.
 
 - Sveriges Radio P3 API (No API-KEY required)
 - Years 2018 to 2021
-- What the processed data looked like (title, artist, albumname): 
+- What the processed data looked like (title, artist, album name): 
 
 ```{r}
 suppressPackageStartupMessages({library(tidyverse)})
@@ -36,7 +36,7 @@ print(head(df,n = 5))
 ## The shiny logic
 
 - All actions on the UI will make a reaction on the server
-- One can as well group some elements in a module to create an 
+- One can as well group some elements in a module to create a 
 unique name space and reuse code.
 
 - Figure 1. Shiny logic, action means reaction
@@ -57,7 +57,7 @@ unique name space and reuse code.
 
 - Shiny has good use in data exploration
 
-- The learning curve is not as big if you know R
+- The learning curve is not as steep if you know R
 
 - Modules are great but one need to choose your battles, the more is not
 the merrier
