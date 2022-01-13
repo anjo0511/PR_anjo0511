@@ -1,11 +1,11 @@
 ---
-title: "The snappy title of your project"
-author: "Jens Jensen"
-date: "2020-12-17"
+title: "Exploration shinyapp on P3 radio tableau"
+author: "Andreé Johnsson"
+date: "2022-01-12"
 output:
   ioslides_presentation:
     logo: SU_logo_CMYK.png
-    incremental: TRUE
+    incremental: FALSE
     css: slides.css
 ---
 
@@ -13,27 +13,53 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## R Markdown
+## Introduction
 
-This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+- Do you got the skills to make a web interface?
+- R shiny enables web interface coding inside rstudio
+- R shiny converts R to html, css and javascipt
+- Purpose is to test the rumors and see for myself if it can be useful for
+explorative analysis. 
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+## Data acquisition
 
-## Slide with Bullets
+- Sveriges Radio P3 API (No API-KEY required)
+- Years 2018 to 2021
+- What the processed data looked like (title, artist, albumname): 
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
-
-## Slide with R Output
-
-```{r cars, echo = TRUE}
-summary(cars)
+```{r}
+suppressPackageStartupMessages({library(tidyverse)})
+suppressMessages({df <- read_csv("../Data/sveriges_radio_P3_2018_2021_TOT.csv")})
+print(head(df,n = 5))
 ```
 
-## Slide with Plot
+## The shiny logic
 
-```{r pressure}
-plot(pressure)
-```
+- All actions on the UI will make a reaction on the server
+- One can as well group some elements in the so called module to create a 
+unique name space and reuse code.
+
+- Figure 1. Shiny logic, action means reaction
+
+<img width='50%' src="index.png">
+
+
+## My application
+
+- App structure based on rows and columns as in html with divs
+
+- Figure 2. App layout, in red are the highlighted modules
+
+<img width='100%' src="../Data/app_layout_with_squares.png"> 
+
+
+## Conclusion
+
+- Shiny has good use in data exploration
+
+- The learning curve is not as big if you know R
+
+- Modularize applications are greate but one need to choose your battles
+
+- Recomend using shiny to share analysis results
 
